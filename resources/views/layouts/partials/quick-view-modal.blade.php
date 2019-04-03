@@ -35,7 +35,7 @@
                                 <!--=======  big image slider single item  =======-->
 
                                 <div class="big-image-slider-single-item">
-                                    <img src="assets/img/products/big1-1.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/products/big1-1.jpg') }}" class="img-fluid" alt="">
                                 </div>
 
                                 <!--=======  End of big image slider single item  =======-->
@@ -43,7 +43,7 @@
                                 <!--=======  big image slider single item  =======-->
 
                                 <div class="big-image-slider-single-item">
-                                    <img src="assets/img/products/big1-2.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/products/big1-2.jpg') }}" class="img-fluid" alt="">
                                 </div>
 
                                 <!--=======  End of big image slider single item  =======-->
@@ -51,7 +51,7 @@
                                 <!--=======  big image slider single item  =======-->
 
                                 <div class="big-image-slider-single-item">
-                                    <img src="assets/img/products/big1-3.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/products/big1-3.jpg') }}" class="img-fluid" alt="">
                                 </div>
 
                                 <!--=======  End of big image slider single item  =======-->
@@ -59,7 +59,7 @@
                                 <!--=======  big image slider single item  =======-->
 
                                 <div class="big-image-slider-single-item">
-                                    <img src="assets/img/products/big1-4.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/products/big1-4.jpg') }}" class="img-fluid" alt="">
                                 </div>
 
                                 <!--=======  End of big image slider single item  =======-->
@@ -67,7 +67,7 @@
                                 <!--=======  big image slider single item  =======-->
 
                                 <div class="big-image-slider-single-item">
-                                    <img src="assets/img/products/big1-5.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/products/big1-5.jpg') }}" class="img-fluid" alt="">
                                 </div>
 
                                 <!--=======  End of big image slider single item  =======-->
@@ -75,7 +75,7 @@
                                 <!--=======  big image slider single item  =======-->
 
                                 <div class="big-image-slider-single-item">
-                                    <img src="assets/img/products/big1-6.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/products/big1-6.jpg') }}" class="img-fluid" alt="">
                                 </div>
 
                                 <!--=======  End of big image slider single item  =======-->

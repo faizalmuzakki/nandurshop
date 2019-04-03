@@ -43,7 +43,7 @@
                         <div class="slider-single-post">
                             <div class="slider-single-post__image">
                                 <a href="blog-post-left-sidebar.html">
-                                    <img src="assets/img/blog/slider1.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/blog/slider1.jpg') }}" class="img-fluid" alt="">
                                 </a>
                             </div>
                             <div class="slider-single-post__content">

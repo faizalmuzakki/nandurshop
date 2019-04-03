@@ -11,7 +11,7 @@
 
                             <div class="single-icon-feature">
                                 <div class="single-icon-feature__icon">
-                                    <img src="assets/img/icons/free_shipping.png" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/icons/free_shipping.png') }}" class="img-fluid" alt="">
                                 </div>
                                 <div class="single-icon-feature__content">
                                     <p class="feature-title">Free Shipping</p>
@@ -26,7 +26,7 @@
 
                             <div class="single-icon-feature">
                                 <div class="single-icon-feature__icon">
-                                    <img src="assets/img/icons/support247.png" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/icons/support247.png') }}" class="img-fluid" alt="">
                                 </div>
                                 <div class="single-icon-feature__content">
                                     <p class="feature-title">Support 24/7</p>
@@ -41,7 +41,7 @@
 
                             <div class="single-icon-feature">
                                 <div class="single-icon-feature__icon">
-                                    <img src="assets/img/icons/moneyback.png" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/icons/moneyback.png') }}" class="img-fluid" alt="">
                                 </div>
                                 <div class="single-icon-feature__content">
                                     <p class="feature-title">100% Money Back</p>
@@ -56,7 +56,7 @@
 
                             <div class="single-icon-feature">
                                 <div class="single-icon-feature__icon">
-                                    <img src="assets/img/icons/payment_secure.png" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/icons/payment_secure.png') }}" class="img-fluid" alt="">
                                 </div>
                                 <div class="single-icon-feature__content">
                                     <p class="feature-title">Payment Secure</p>

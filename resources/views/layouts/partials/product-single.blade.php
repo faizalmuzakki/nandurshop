@@ -53,8 +53,8 @@
                             <div class="single-slider-product">
                                 <div class="single-slider-product__image">
                                     <a href="single-product.html">
-                                        <img src="assets/img/products/medium10.jpg" class="img-fluid" alt="">
-                                        <img src="assets/img/products/medium11.jpg" class="img-fluid" alt="">
+                                        <img src="{{ asset('assets/img/products/medium10.jpg') }}" class="img-fluid" alt="">
+                                        <img src="{{ asset('assets/img/products/medium11.jpg') }}" class="img-fluid" alt="">
                                     </a>
 
                                     <span class="discount-label discount-label--green">-10%</span>
@@ -102,8 +102,8 @@
                             <div class="single-slider-product">
                                 <div class="single-slider-product__image">
                                     <a href="single-product.html">
-                                        <img src="assets/img/products/medium12.jpg" class="img-fluid" alt="">
-                                        <img src="assets/img/products/medium13.jpg" class="img-fluid" alt="">
+                                        <img src="{{ asset('assets/img/products/medium12.jpg') }}" class="img-fluid" alt="">
+                                        <img src="{{ asset('assets/img/products/medium13.jpg') }}" class="img-fluid" alt="">
                                     </a>
 
                                     <span class="discount-label discount-label--green">-15%</span>
@@ -151,8 +151,8 @@
                             <div class="single-slider-product">
                                 <div class="single-slider-product__image">
                                     <a href="single-product.html">
-                                        <img src="assets/img/products/medium14.jpg" class="img-fluid" alt="">
-                                        <img src="assets/img/products/medium15.jpg" class="img-fluid" alt="">
+                                        <img src="{{ asset('assets/img/products/medium14.jpg') }}" class="img-fluid" alt="">
+                                        <img src="{{ asset('assets/img/products/medium15.jpg') }}" class="img-fluid" alt="">
                                     </a>
 
                                     <span class="discount-label discount-label--green">-20%</span>
@@ -200,8 +200,8 @@
                             <div class="single-slider-product">
                                 <div class="single-slider-product__image">
                                     <a href="single-product.html">
-                                        <img src="assets/img/products/medium16.jpg" class="img-fluid" alt="">
-                                        <img src="assets/img/products/medium17.jpg" class="img-fluid" alt="">
+                                        <img src="{{ asset('assets/img/products/medium16.jpg') }}" class="img-fluid" alt="">
+                                        <img src="{{ asset('assets/img/products/medium17.jpg') }}" class="img-fluid" alt="">
                                     </a>
 
                                     <span class="discount-label discount-label--green">-20%</span>
@@ -250,7 +250,7 @@
                             <div class="single-slider-product">
                                 <div class="single-slider-product__image">
                                     <a href="single-product.html">
-                                        <img src="assets/img/products/medium10.jpg" class="img-fluid" alt="">
+                                        <img src="{{ asset('assets/img/products/medium10.jpg') }}" class="img-fluid" alt="">
                                     </a>
 
                                     <span class="discount-label discount-label--green">-10%</span>

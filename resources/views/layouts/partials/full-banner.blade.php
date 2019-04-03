@@ -19,7 +19,7 @@
                 <!--=======  full banner image  =======-->
                 <div class="full-banner__image">
                     <a href="shop-left-sidebar.html">
-                        <img src="assets/img/banners/banner-big1.jpg" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/img/banners/banner-big1.jpg') }}" class="img-fluid" alt="">
                     </a>
                 </div>
 

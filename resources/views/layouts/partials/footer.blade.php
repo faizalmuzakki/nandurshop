@@ -9,7 +9,7 @@
 
                             <div class="single-footer-widget">
                                 <div class="footer-logo mb-25">
-                                    <img src="assets/img/logo-alula2.png" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/logo-alula2.png') }}" class="img-fluid" alt="">
                                 </div>
 
                                 <div class="footer-text-block mb-10">
@@ -66,84 +66,84 @@
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a1.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a1.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a2.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a2.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a3.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a3.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a4.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a4.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a5.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a5.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a6.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a6.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a7.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a7.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a8.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a8.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a1.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a1.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a2.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a2.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a3.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a3.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
                                         <!--=======  single instagram image  =======-->
 
                                         <div class="single-instagram-image">
-                                            <a href="#"><img src="assets/img/instagram/a4.jpg" class="img-fluid" alt=""></a>
+                                            <a href="#"><img src="{{ asset('assets/img/instagram/a4.jpg') }}" class="img-fluid" alt=""></a>
                                         </div>
 
                                         <!--=======  End of single instagram image  =======-->
@@ -196,7 +196,7 @@
                         </div>
                         <div class="col-md-6 text-center text-md-right">
                             <div class="payment-logo">
-                                <img src="assets/img/icons/payment.png" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/img/icons/payment.png') }}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>

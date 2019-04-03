@@ -7,7 +7,7 @@
                 <div class="single-split-banner">
                     <div class="single-split-banner__image">
                         <a href="shop-left-sidebar.html">
-                            <img src="assets/img/banners/banner1.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('assets/img/banners/banner1.jpg') }}" class="img-fluid" alt="">
                             <div class="single-split-banner__image__content">
                                 <p class="split-banner-title split-banner-title--light">New Arrivals</p>
                                 <p class="split-banner-title split-banner-title--bold">House Plants</p>
@@ -25,7 +25,7 @@
                 <div class="single-split-banner">
                     <div class="single-split-banner__image">
                         <a href="shop-left-sidebar.html">
-                            <img src="assets/img/banners/banner2.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('assets/img/banners/banner2.jpg') }}" class="img-fluid" alt="">
                             <div class="single-split-banner__image__content">
                                 <p class="split-banner-title split-banner-title--light">New Arrivals</p>
                                 <p class="split-banner-title split-banner-title--bold">Pothos Neon</p>

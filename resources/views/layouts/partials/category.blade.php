@@ -37,7 +37,7 @@
                         <div class="single-category-item">
                             <div class="single-category-item__image">
                                 <a href="shop-left-sidebar.html">
-                                    <img src="assets/img/category/cat1.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/category/cat1.jpg') }}" class="img-fluid" alt="">
                                 </a>
                                 <div class="single-category-item__image__content">
                                     <h5 class="category-title"><a href="shop-left-sidebar.html">BONSAI</a></h5>
@@ -53,7 +53,7 @@
                         <div class="single-category-item">
                             <div class="single-category-item__image">
                                 <a href="shop-left-sidebar.html">
-                                    <img src="assets/img/category/cat2.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/category/cat2.jpg') }}" class="img-fluid" alt="">
                                 </a>
                                 <div class="single-category-item__image__content">
                                     <h5 class="category-title"><a href="shop-left-sidebar.html">HOUSE PLANTS</a></h5>
@@ -69,7 +69,7 @@
                         <div class="single-category-item">
                             <div class="single-category-item__image">
                                 <a href="shop-left-sidebar.html">
-                                    <img src="assets/img/category/cat3.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/category/cat3.jpg') }}" class="img-fluid" alt="">
                                 </a>
                                 <div class="single-category-item__image__content">
                                     <h5 class="category-title"><a href="shop-left-sidebar.html">PERENNIALS</a></h5>
@@ -85,7 +85,7 @@
                         <div class="single-category-item">
                             <div class="single-category-item__image">
                                 <a href="shop-left-sidebar.html">
-                                    <img src="assets/img/category/cat4.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/category/cat4.jpg') }}" class="img-fluid" alt="">
                                 </a>
                                 <div class="single-category-item__image__content">
                                     <h5 class="category-title"><a href="shop-left-sidebar.html">PLANT FOR GIFT</a></h5>
@@ -101,7 +101,7 @@
                         <div class="single-category-item">
                             <div class="single-category-item__image">
                                 <a href="shop-left-sidebar.html">
-                                    <img src="assets/img/category/cat1.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/category/cat1.jpg') }}" class="img-fluid" alt="">
                                 </a>
                                 <div class="single-category-item__image__content">
                                     <h5 class="category-title"><a href="shop-left-sidebar.html">BONSAI</a></h5>

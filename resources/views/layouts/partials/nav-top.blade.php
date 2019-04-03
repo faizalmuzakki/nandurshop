@@ -46,13 +46,13 @@
                                 </div>
                                 <span class="separator">|</span>
                                 <div class="header-top-single-dropdown">
-                                    <a href="javascript:void(0)" class="active-dropdown-trigger" id="language-options"> <img src="assets/img/icons/en-gb.png" alt=""> En-Gb <i class="ion-ios-arrow-down"></i></a>
+                                    <a href="javascript:void(0)" class="active-dropdown-trigger" id="language-options"> <img src="{{ asset('assets/img/icons/en-gb.png') }}" alt=""> En-Gb <i class="ion-ios-arrow-down"></i></a>
                                     <!--=======  dropdown menu items  =======-->
 
                                     <div class="header-top-single-dropdown__dropdown-menu-items deactive-dropdown-menu">
                                         <ul>
-                                            <li><a href="#"> <img src="assets/img/icons/en-gb.png" alt=""> English </a></li>
-                                            <li><a href="#"> <img src="assets/img/icons/de-de.png" alt=""> Germany </a></li>
+                                            <li><a href="#"> <img src="{{ asset('assets/img/icons/en-gb.png') }}" alt=""> English </a></li>
+                                            <li><a href="#"> <img src="{{ asset('assets/img/icons/de-de.png') }}" alt=""> Germany </a></li>
                                         </ul>
                                     </div>
 
@@ -95,7 +95,7 @@
 
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo.png" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/logo.png') }}" class="img-fluid" alt="">
                                 </a>
                             </div>
 
@@ -120,7 +120,7 @@
 
                             <div class="customer-support-text">
                                 <div class="icon">
-                                    <img src="assets/img/icons/icon-header-phone.png" class="img-fluid" alt="">
+                                    <img src="{{ asset('assets/img/icons/icon-header-phone.png') }}" class="img-fluid" alt="">
                                 </div>
 
                                 <div class="text">
@@ -148,7 +148,7 @@
                                         <div class="single-item">
                                             <div class="image">
                                                 <a href="single-product.html">
-                                                    <img src="assets/img/cart-image/small1-90x90.jpg" class="img-fluid" alt="">
+                                                    <img src="{{ asset('assets/img/cart-image/small1-90x90.jpg') }}" class="img-fluid" alt="">
                                                 </a>
                                             </div>
                                             <div class="content">
@@ -161,7 +161,7 @@
 
                                             <div class="image">
                                                 <a href="single-product.html">
-                                                    <img src="assets/img/cart-image/small2-90x90.jpg" class="img-fluid" alt="">
+                                                    <img src="{{ asset('assets/img/cart-image/small2-90x90.jpg') }}" class="img-fluid" alt="">
                                                 </a>
                                             </div>
                                             <div class="content">

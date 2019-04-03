@@ -81,7 +81,7 @@
                                     </li>
                                     <li class="megamenu-banner d-none d-lg-block mt-30 w-100">
                                         <a href="shop-left-sidebar.html" class="mb-0">
-                                            <img src="assets/img/banners/img-bottom-menu.jpg" class="img-fluid" alt="">
+                                            <img src="{{ asset('assets/img/banners/img-bottom-menu.jpg') }}" class="img-fluid" alt="">
                                         </a>
                                     </li>
                                 </ul>

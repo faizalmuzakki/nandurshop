@@ -31,7 +31,7 @@
 
                         <div class="single-brand-logo">
                             <a href="#">
-                                <img src="assets/img/brands/brand1.png" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/img/brands/brand1.png') }}" class="img-fluid" alt="">
                             </a>
                         </div>
 
@@ -41,7 +41,7 @@
 
                         <div class="single-brand-logo">
                             <a href="#">
-                                <img src="assets/img/brands/brand2.png" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/img/brands/brand2.png') }}" class="img-fluid" alt="">
                             </a>
                         </div>
 
@@ -51,7 +51,7 @@
 
                         <div class="single-brand-logo">
                             <a href="#">
-                                <img src="assets/img/brands/brand3.png" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/img/brands/brand3.png') }}" class="img-fluid" alt="">
                             </a>
                         </div>
 
@@ -61,7 +61,7 @@
 
                         <div class="single-brand-logo">
                             <a href="#">
-                                <img src="assets/img/brands/brand4.png" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/img/brands/brand4.png') }}" class="img-fluid" alt="">
                             </a>
                         </div>
 
@@ -71,7 +71,7 @@
 
                         <div class="single-brand-logo">
                             <a href="#">
-                                <img src="assets/img/brands/brand5.png" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/img/brands/brand5.png') }}" class="img-fluid" alt="">
                             </a>
                         </div>
 
@@ -81,7 +81,7 @@
 
                         <div class="single-brand-logo">
                             <a href="#">
-                                <img src="assets/img/brands/brand1.png" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/img/brands/brand1.png') }}" class="img-fluid" alt="">
                             </a>
                         </div>
 

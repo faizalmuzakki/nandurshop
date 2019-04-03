@@ -1,5 +1,5 @@
 <!-- Vendor JS -->
-<script src="assets/js/vendors.js"></script>
+<script src="{{ asset('assets/js/vendors.js') }}"></script>
 
 <!-- Active JS -->
-<script src="assets/js/active.js"></script>
+<script src="{{ asset('assets/js/active.js') }}"></script>
