@@ -37,8 +37,8 @@
 
                                     <div class="header-top-single-dropdown__dropdown-menu-items deactive-dropdown-menu extra-small-mobile-fix">
                                         <ul>
-                                            <li><a href="login-register.html">Register</a></li>
-                                            <li><a href="login-register.html">Login</a></li>
+                                            <li><a href="{{ Route('website.login-register') }}">Register</a></li>
+                                            <li><a href="{{ Route('website.login-register') }}">Login</a></li>
                                         </ul>
                                     </div>
 
@@ -94,7 +94,7 @@
                             <!--=======  logo  =======-->
 
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="index">
                                     <img src="{{ asset('assets/img/logo.png') }}" class="img-fluid" alt="">
                                 </a>
                             </div>
@@ -147,12 +147,12 @@
                                     <div class="small-cart-item-wrapper">
                                         <div class="single-item">
                                             <div class="image">
-                                                <a href="single-product.html">
+                                                <a href="{{ Route('website.single-product') }}">
                                                     <img src="{{ asset('assets/img/cart-image/small1-90x90.jpg') }}" class="img-fluid" alt="">
                                                 </a>
                                             </div>
                                             <div class="content">
-                                                <p class="cart-name"><a href="single-product.html">Cillum dolore</a></p>
+                                                <p class="cart-name"><a href="{{ Route('website.single-product') }}">Cillum dolore</a></p>
                                                 <p class="cart-quantity"><span class="quantity-mes">1 x </span> $78.80</p>
                                             </div>
                                             <a href="#" class="remove-icon"><i class="ion-close-round"></i></a>
@@ -160,12 +160,12 @@
                                         <div class="single-item">
 
                                             <div class="image">
-                                                <a href="single-product.html">
+                                                <a href="{{ Route('website.single-product') }}">
                                                     <img src="{{ asset('assets/img/cart-image/small2-90x90.jpg') }}" class="img-fluid" alt="">
                                                 </a>
                                             </div>
                                             <div class="content">
-                                                <p class="cart-name"><a href="single-product.html">Condimentum posuere</a></p>
+                                                <p class="cart-name"><a href="{{ Route('website.single-product') }}">Condimentum posuere</a></p>
                                                 <p class="cart-quantity"><span class="quantity-mes">1 x </span> $78.80</p>
                                             </div>
                                             <a href="#" class="remove-icon"><i class="ion-close-round"></i></a>
@@ -195,8 +195,8 @@
                                         </table>
 
                                         <div class="cart-buttons">
-                                            <a href="cart.html" class="theme-button">View Cart</a>
-                                            <a href="checkout.html" class="theme-button">Checkout</a>
+                                            <a href="{{ Route('website.cart') }}" class="theme-button">View Cart</a>
+                                            <a href="{{ Route('website.checkout') }}" class="theme-button">Checkout</a>
                                         </div>
                                     </div>
 

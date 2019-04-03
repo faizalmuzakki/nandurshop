@@ -3,3 +3,5 @@
 
 <!-- Active JS -->
 <script src="{{ asset('assets/js/active.js') }}"></script>
+
+@yield('unique-js')

@@ -6,12 +6,12 @@
                 <div class="main-menu d-none d-lg-block">
                     <nav>
                         <ul>
-                            <li class="active menu-item-has-children"><a href="index.html">HOME</a>
+                            <li class="active menu-item-has-children"><a href="{{ Route('website.index') }}">HOME</a>
                                 <ul class="sub-menu">
-                                    <li><a href="index.html">Home Shop 1</a></li>
-                                    <li><a href="index-2.html">Home Shop 2</a></li>
-                                    <li><a href="index-3.html">Home Shop 3</a></li>
-                                    <li><a href="index-4.html">Home Shop 4</a></li>
+                                    <li><a href="{{ Route('website.index') }}">Home Shop 1</a></li>
+                                    <li><a href="{{ Route('website.index-2') }}">Home Shop 2</a></li>
+                                    <li><a href="{{ Route('website.index-3') }}">Home Shop 3</a></li>
+                                    <li><a href="{{ Route('website.index-4') }}">Home Shop 4</a></li>
                                 </ul>
                             </li>
 
@@ -19,88 +19,88 @@
                                 <ul class="sub-menu">
                                     <li class="menu-item-has-children"><a href="#">Page List One</a>
                                         <ul class="sub-menu">
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a href="{{ Route('website.cart') }}">Cart</a></li>
+                                            <li><a href="{{ Route('website.checkout') }}">Checkout</a></li>
+                                            <li><a href="{{ Route('website.wishlist') }}">Wishlist</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children"><a href="#">page list two</a>
                                         <ul class="sub-menu">
-                                            <li><a href="my-account.html">My Account</a></li>
-                                            <li><a href="login-register.html">Login Register</a></li>
-                                            <li><a href="faq.html">FAQ</a></li>
+                                            <li><a href="{{ Route('website.my-account') }}">My Account</a></li>
+                                            <li><a href="{{ Route('website.login-register') }}">Login Register</a></li>
+                                            <li><a href="{{ Route('website.faq') }}">FAQ</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children"><a href="#">Page list three</a>
                                         <ul class="sub-menu">
-                                            <li><a href="compare.html">Compare</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="{{ Route('website.compare') }}">Compare</a></li>
+                                            <li><a href="{{ Route('website.contact') }}">Contact</a></li>
+                                            <li><a href="{{ Route('website.about') }}">About Us</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
 
-                            <li class="menu-item-has-children"><a href="shop-left-sidebar.html">SHOP</a>
+                            <li class="menu-item-has-children"><a href="{{ Route('website.shop-left-sidebar') }}">SHOP</a>
                                 <ul class="mega-menu four-column">
                                     <li><a href="#">Shop Grid</a>
                                         <ul>
-                                            <li><a href="shop-3-column.html">shop 3 column</a></li>
-                                            <li><a href="shop-4-column.html">shop 4 column</a></li>
-                                            <li><a href="shop-left-sidebar.html">shop left sidebar</a></li>
-                                            <li><a href="shop-right-sidebar.html">shop right sidebar</a></li>
+                                            <li><a href="{{ Route('website.shop-3-column') }}">shop 3 column</a></li>
+                                            <li><a href="{{ Route('website.shop-4-column') }}">shop 4 column</a></li>
+                                            <li><a href="{{ Route('website.shop-left-sidebar') }}">shop left sidebar</a></li>
+                                            <li><a href="{{ Route('website.shop-right-sidebar') }}">shop right sidebar</a></li>
 
                                         </ul>
                                     </li>
-                                    <li><a href="shop-list-left-sidebar.html">Shop List</a>
+                                    <li><a href="shop-list-left-sidebar">Shop List</a>
                                         <ul>
-                                            <li><a href="shop-list.html">shop List</a></li>
-                                            <li><a href="shop-list-left-sidebar.html">shop List Left Sidebar</a></li>
-                                            <li><a href="shop-list-right-sidebar.html">shop List Right Sidebar</a></li>
+                                            <li><a href="{{ Route('website.shop-list') }}">shop List</a></li>
+                                            <li><a href="{{ Route('website.shop-list-left-sidebar') }}">shop List Left Sidebar</a></li>
+                                            <li><a href="{{ Route('website.shop-list-right-sidebar') }}">shop List Right Sidebar</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="single-product.html">Single Product</a>
+                                    <li><a href="single-product">Single Product</a>
                                         <ul>
-                                            <li><a href="single-product.html">Single Product</a></li>
-                                            <li><a href="single-product-variable.html">Single Product variable</a></li>
-                                            <li><a href="single-product-affiliate.html">Single Product affiliate</a></li>
-                                            <li><a href="single-product-group.html">Single Product group</a></li>
-                                            <li><a href="single-product-tabstyle-2.html">Tab Style 2</a></li>
-                                            <li><a href="single-product-tabstyle-3.html">Tab Style 3</a></li>
+                                            <li><a href="{{ Route('website.single-product') }}">Single Product</a></li>
+                                            <li><a href="{{ Route('website.single-product-variable') }}">Single Product variable</a></li>
+                                            <li><a href="{{ Route('website.single-product-affiliate') }}">Single Product affiliate</a></li>
+                                            <li><a href="{{ Route('website.single-product-group') }}">Single Product group</a></li>
+                                            <li><a href="{{ Route('website.single-product-tabstyle-2') }}">Tab Style 2</a></li>
+                                            <li><a href="{{ Route('website.single-product-tabstyle-3') }}">Tab Style 3</a></li>
 
                                         </ul>
                                     </li>
-                                    <li><a href="single-product.html">Single Product</a>
+                                    <li><a href="single-product">Single Product</a>
                                         <ul>
-                                            <li><a href="single-product-gallery-left.html">Gallery Left</a></li>
-                                            <li><a href="single-product-gallery-right.html">Gallery Right</a></li>
-                                            <li><a href="single-product-sticky-left.html">Sticky Left</a></li>
-                                            <li><a href="single-product-sticky-right.html">Sticky Right</a></li>
-                                            <li><a href="single-product-slider-box.html">Slider Box</a></li>
+                                            <li><a href="{{ Route('website.single-product-gallery-left') }}">Gallery Left</a></li>
+                                            <li><a href="{{ Route('website.single-product-gallery-right') }}">Gallery Right</a></li>
+                                            <li><a href="{{ Route('website.single-product-sticky-left') }}">Sticky Left</a></li>
+                                            <li><a href="{{ Route('website.single-product-sticky-right') }}">Sticky Right</a></li>
+                                            <li><a href="{{ Route('website.single-product-slider-box') }}">Slider Box</a></li>
                                         </ul>
                                     </li>
                                     <li class="megamenu-banner d-none d-lg-block mt-30 w-100">
-                                        <a href="shop-left-sidebar.html" class="mb-0">
+                                        <a href="shop-left-sidebar" class="mb-0">
                                             <img src="{{ asset('assets/img/banners/img-bottom-menu.jpg') }}" class="img-fluid" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </li>
 
-                            <li class="menu-item-has-children"><a href="blog-left-sidebar.html">BLOG</a>
+                            <li class="menu-item-has-children"><a href="blog-left-sidebar">BLOG</a>
                                 <ul class="sub-menu">
-                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                    <li><a href="blog-post-left-sidebar.html">Blog Post Left Sidebar</a></li>
-                                    <li><a href="blog-post-right-sidebar.html">Blog Post Right Sidebar</a></li>
-                                    <li><a href="blog-post-image-format.html">Blog Post Image Format</a></li>
-                                    <li><a href="blog-post-image-gallery.html">Blog Post Image Gallery</a></li>
-                                    <li><a href="blog-post-audio-format.html">Blog Post Audio Format</a></li>
-                                    <li><a href="blog-post-video-format.html">Blog Post Video Format</a></li>
+                                    <li><a href="{{ Route('website.blog-left-sidebar') }}">Blog Left Sidebar</a></li>
+                                    <li><a href="{{ Route('website.blog-right-sidebar') }}">Blog Right Sidebar</a></li>
+                                    <li><a href="{{ Route('website.blog-post-left-sidebar') }}">Blog Post Left Sidebar</a></li>
+                                    <li><a href="{{ Route('website.blog-post-right-sidebar') }}">Blog Post Right Sidebar</a></li>
+                                    <li><a href="{{ Route('website.blog-post-image-format') }}">Blog Post Image Format</a></li>
+                                    <li><a href="{{ Route('website.blog-post-image-gallery') }}">Blog Post Image Gallery</a></li>
+                                    <li><a href="{{ Route('website.blog-post-audio-format') }}">Blog Post Audio Format</a></li>
+                                    <li><a href="{{ Route('website.blog-post-video-format') }}">Blog Post Video Format</a></li>
                                 </ul>
                             </li>
 
-                            <li><a href="contact.html">CONTACT</a></li>
+                            <li><a href="contact">CONTACT</a></li>
                         </ul>
                     </nav>
 
