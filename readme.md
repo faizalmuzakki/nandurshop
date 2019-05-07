@@ -26,7 +26,7 @@
     - DELETE /api/commodity/{id}
 
 #### Variety
-- Showing all or a proportion of commodity (default all)
+- Showing all or a proportion of variety (default all)
     - GET /api/variety [all]
     - GET /api/variety?take=[as you want]
 - Create new variety
