@@ -1,16 +1,16 @@
-### Nandurshop
+## Nandurshop
 
 > Dalam rangka memenuhi tugas kuliah Teknologi Bergerak
 
-#### Member
+### Member
 - Faizal Khilmi Muzakki - 05111640000120
 - Marde Fasma Ul'Aza - 05111640000046
 
-#### Penjelasan
+### Penjelasan
 - Aplikasi berbasis web dengan kerangka kerja Laravel sebagai restapi-server
 
-#### What we serve
-##### Commodity
+### What we serve
+#### Commodity
 - Showing all or a proportion of commodity (default all)
     - GET /api/commodity [all]
     - GET /api/commodity?take=[as you want]
@@ -25,7 +25,7 @@
 - Delete commodity by id
     - DELETE /api/commodity/{id}
 
-##### Variety
+#### Variety
 - Showing all or a proportion of commodity (default all)
     - GET /api/variety [all]
     - GET /api/variety?take=[as you want]
