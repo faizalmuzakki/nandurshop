@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Commodity extends Model
 {
     protected $fillable = [
-        'variety_id', 'name', 'planted_at'
+        'variety_id', 'name', 'planted_at', 'image_url'
     ];
 
     public function variety(){

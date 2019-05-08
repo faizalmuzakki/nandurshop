@@ -64,7 +64,8 @@ class CommodityApiController extends Controller
             $commodity = Commodity::create([
                 'name' => $request->name,
                 'variety_id' => $request->variety_id,
-                'planted_at' => $request->planted_at
+                'planted_at' => $request->planted_at,
+                'image_url' => $request->image_url
             ]);
 
             $commodity_resource = new CommodityResource($commodity);
@@ -128,6 +129,7 @@ class CommodityApiController extends Controller
             $commodity->name = $request->name;
             $commodity->variety_id = $request->variety_id;
             $commodity->planted_at = $request->planted_at;
+            $commodity->image_url = $request->image_url;
             $commodity->save();
 
             $commodity_resource = new CommodityResource($commodity);
