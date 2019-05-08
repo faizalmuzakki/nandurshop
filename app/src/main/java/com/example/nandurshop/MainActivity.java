@@ -9,38 +9,33 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
-
-    private static final int REQUEST_IMAGE_CAPTURE = 100;
-    ImageView imageView;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Button btnCameraForm, btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imageView = (ImageView) findViewById(R.id.imageView);
-        Button btnCamera = (Button) findViewById(R.id.btnCamera);
 
-        btnCamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//                intent.putExtra("android.intent.extras.", 0);
+        btnCameraForm = (Button) findViewById(R.id.btnCameraForm);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
 
-                if (intent.resolveActivity(getPackageManager())!=null){
-                    startActivityForResult(intent,REQUEST_IMAGE_CAPTURE);
-                }
-            }
-        });
+        btnCameraForm.setOnClickListener(this);
+        btnLogin.setOnClickListener(this);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
-            if (data != null){
-                Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-                imageView.setImageBitmap(bitmap);
-            }
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()){
+            case R.id.btnCameraForm:
+                intent = new Intent(this,CameraFormActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btnLogin:
+                intent = new Intent(this,LoginActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 }
