@@ -61,6 +61,6 @@ Route::name('website.')->group(function(){
     Route::view('/blog-post-video-format', 'website.blog-post-video-format.index')->name('blog-post-video-format');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/login', function(){
+//     return view('welcome');
+// })->name('login');
