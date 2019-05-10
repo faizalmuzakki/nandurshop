@@ -1,7 +1,9 @@
-package com.example.nandurshop;
+package com.example.nandurshop.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.nandurshop.R;
 
 public class LoginActivity extends AppCompatActivity {
     @Override

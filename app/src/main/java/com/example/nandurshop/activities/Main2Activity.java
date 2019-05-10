@@ -1,4 +1,4 @@
-package com.example.nandurshop;
+package com.example.nandurshop.activities;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,9 +10,13 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.nandurshop.fragments.DashboardFragment;
+import com.example.nandurshop.fragments.PlantsFragment;
+import com.example.nandurshop.R;
+
 public class Main2Activity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener,
         DashboardFragment.OnFragmentInteractionListener,
-        PlantsFragment.OnFragmentInteractionListener{
+        PlantsFragment.OnFragmentInteractionListener {
 
     private TextView mTextMessage;
 

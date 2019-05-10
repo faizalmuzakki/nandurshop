@@ -9,4 +9,5 @@
     <color name="colorForm">#E0F1D6</color>
     <color name="colorText">#5294E2</color>
     <color name="colorBack">#404552</color>
+    <color name="colorFormInput">#B1E7AF</color>
 </resources>
