@@ -17,7 +17,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void goRegister(View v){
-        Intent regIntent = new Intent(this,RegisterActivity.class);
+        Intent regIntent = new Intent(this, RegisterActivity.class);
         startActivity(regIntent);
     }
 }

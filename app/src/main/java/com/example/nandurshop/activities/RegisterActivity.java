@@ -1,9 +1,12 @@
-package com.example.nandurshop;
+package com.example.nandurshop.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.nandurshop.R;
+import com.example.nandurshop.activities.LoginActivity;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -14,7 +17,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void goLogin(View v){
-        Intent regIntent = new Intent(this,LoginActivity.class);
+        Intent regIntent = new Intent(this, LoginActivity.class);
         startActivity(regIntent);
     }
 }
