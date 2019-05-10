@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".activities.LoginActivity">
+    tools:context=".RegisterActivity">
 
     <EditText
-
         android:id="@+id/etUsernameLog"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -18,17 +17,39 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_buttons"
         android:ems="10"
+        android:hint="Username"
         android:inputType="textPersonName"
         android:paddingHorizontal="16dp"
-        android:hint="Username"
-        android:textColorHint="@color/colorPrimary"
         android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.345" />
+        app:layout_constraintVertical_bias="0.35" />
+
+    <EditText
+        android:id="@+id/etEmailLog"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_buttons"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451" />
 
     <EditText
         android:id="@+id/etPasswordLog"
@@ -40,20 +61,42 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_buttons"
         android:ems="10"
+        android:hint="Password"
         android:inputType="textPassword"
         android:paddingHorizontal="16dp"
-        android:hint="Password"
-        android:textColorHint="@color/colorPrimary"
         android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
+        app:layout_constraintVertical_bias="0.548" />
+
+    <EditText
+        android:id="@+id/etPasswordConfirmLog"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_buttons"
+        android:ems="10"
+        android:hint="Password Confirmation"
+        android:inputType="textPassword"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646" />
+
 
     <Button
-
         android:id="@+id/btnLogin"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -65,14 +108,14 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:paddingHorizontal="16dp"
-        android:text="Login"
+        android:text="Register"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.624" />
+        app:layout_constraintVertical_bias="0.801" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -98,15 +141,15 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Don't have account yet? Register"
+        android:text="Already have user? Login"
+        android:onClick="goLogin"
         android:textAlignment="viewStart"
         android:textColor="#5294E2"
-        android:onClick="goRegister"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintHorizontal_bias="0.196"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPasswordLog"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.26" />
 
 </android.support.constraint.ConstraintLayout>

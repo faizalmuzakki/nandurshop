@@ -17,19 +17,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.FormInputTanduranActivity"></activity>
+        <activity android:name=".RegisterActivity"></activity>
         <activity
-            android:name=".activities.Main2Activity"
+            android:name=".Main2Activity"
             android:label="@string/title_activity_main2" />
-        <activity android:name=".activities.CameraFormActivity" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".CameraFormActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".LoginActivity"/>
     </application>
 
 </manifest>
