@@ -21,7 +21,7 @@
         <activity
             android:name=".activities.Main2Activity"
             android:label="@string/title_activity_main2" />
-        <activity android:name=".CameraFormActivity" />
+        <activity android:name=".activities.CameraFormActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
