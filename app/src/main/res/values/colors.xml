@@ -6,7 +6,7 @@
     <color name="colorPrimary">#26282E</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="colorForm">#FFFFFF</color>
+    <color name="colorForm">#E0F1D6</color>
     <color name="colorText">#5294E2</color>
     <color name="colorBack">#404552</color>
 </resources>
