@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'pages/home.dart';
 import 'pages/store.dart';
 import 'pages/tanduran.dart';
+import 'pages/login.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Home Page'),
+      home: Login(title: 'Login Page'),
     );
   }
 }
@@ -55,28 +56,28 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
-    bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: (value){
-          setState(() {
-            _selectedIndex = value;
-            currentPage = pages[value];
-          });
-        },
-        items: const<BottomNavigationBarItem>[
-      BottomNavigationBarItem(
-        icon: Icon(Icons.home),
-        title: Text('Home'),
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.store),
-        title: Text('Toko'),
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.local_florist),
-        title: Text('Tanduran')
-      )
-    ]),
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedIndex,
+          onTap: (value){
+            setState(() {
+              _selectedIndex = value;
+              currentPage = pages[value];
+            });
+          },
+          items: const<BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.store),
+              title: Text('Toko'),
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.local_florist),
+                title: Text('Tanduran')
+            )
+          ]),
     );
   }
 }
