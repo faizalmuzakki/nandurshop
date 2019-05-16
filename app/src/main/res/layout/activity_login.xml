@@ -9,7 +9,7 @@
 
     <EditText
 
-        android:id="@+id/etUsernameLog"
+        android:id="@+id/etEmailLog"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -18,9 +18,9 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_buttons"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:paddingHorizontal="16dp"
-        android:hint="Username"
+        android:hint="Email"
         android:textColorHint="@color/colorPrimary"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
