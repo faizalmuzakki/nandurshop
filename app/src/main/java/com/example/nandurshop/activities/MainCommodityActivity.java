@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.nandurshop.Adapter.CommodityAdapter;
 import com.example.nandurshop.Model.Commodity;
+import com.example.nandurshop.Model.GetCommodity;
 import com.example.nandurshop.Model.RetrofitClientInstance;
 import com.example.nandurshop.Interface.GetDataService;
 import com.example.nandurshop.R;
@@ -34,8 +35,9 @@ public class MainCommodityActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("STATE", "asdasdasasd");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.commodity_main);
 
         btIns = (Button) findViewById(R.id.btIns);
         btIns.setOnClickListener(new View.OnClickListener() {
@@ -53,10 +55,10 @@ public class MainCommodityActivity extends AppCompatActivity {
     }
 
     public void refresh() {
-        Call kontakCall = mApiInterface.getCommodity();
-        kontakCall.enqueue(new Callback<Commodity>() {
+        Call<GetCommodity> kontakCall = mApiInterface.getCommodity();
+        kontakCall.enqueue(new Callback<GetCommodity>() {
             @Override
-            public void onResponse(Call<Commodity> call, Response<Commodity>
+            public void onResponse(Call<GetCommodity> call, Response<GetCommodity>
                     response) {
                 List<Commodity> KontakList = response.body().getListDataCommodity();
                 Log.d("Retrofit Get", "Jumlah data Kontak: " +
@@ -66,7 +68,7 @@ public class MainCommodityActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Commodity> call, Throwable t) {
+            public void onFailure(Call<GetCommodity> call, Throwable t) {
                 Log.e("Retrofit Get", t.toString());
             }
         });

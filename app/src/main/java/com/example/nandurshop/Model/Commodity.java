@@ -2,8 +2,6 @@ package com.example.nandurshop.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
 public class Commodity {
     @SerializedName("variety_id")
     private Integer variety_id;
@@ -13,17 +11,12 @@ public class Commodity {
     private String image_url;
     @SerializedName("planted_at")
     private String planted_at;
-    List<Commodity> listDataCommodity;
 
     public Commodity(String name, String image_url, String planted_at, Integer variety_id) {
         this.name = name;
         this.variety_id = variety_id;
         this.image_url = image_url;
         this.planted_at = planted_at;
-    }
-
-    public List<Commodity> getListDataCommodity(){
-        return listDataCommodity;
     }
 
     public String getName() {

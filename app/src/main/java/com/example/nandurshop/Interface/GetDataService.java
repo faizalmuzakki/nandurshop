@@ -1,6 +1,6 @@
 package com.example.nandurshop.Interface;
 
-import com.example.nandurshop.Model.Commodity;
+import com.example.nandurshop.Model.GetCommodity;
 import com.example.nandurshop.Model.User;
 
 import java.util.List;
@@ -16,7 +16,7 @@ import retrofit2.http.PUT;
 public interface GetDataService {
 
     @GET("/api/commodity")
-    Call<List<Commodity>> getCommodity();
+    Call<GetCommodity> getCommodity();
 //    @POST("/api/commodity")
 //    Call<Commodity> createCommodity();
 //    @GET("/api/commodity/{id}")
