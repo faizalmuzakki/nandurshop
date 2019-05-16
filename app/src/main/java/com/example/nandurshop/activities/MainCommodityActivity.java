@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.nandurshop.Adapter.CommodityAdapter;
 import com.example.nandurshop.Model.Commodity;
@@ -17,7 +16,6 @@ import com.example.nandurshop.Model.RetrofitClientInstance;
 import com.example.nandurshop.Interface.GetDataService;
 import com.example.nandurshop.R;
 import com.example.nandurshop.activities.InsertCommodityActivity;
-import com.example.nandurshop.activities.MainActivity;
 
 import java.util.List;
 
@@ -35,7 +33,6 @@ public class MainCommodityActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("STATE", "asdasdasasd");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.commodity_main);
 

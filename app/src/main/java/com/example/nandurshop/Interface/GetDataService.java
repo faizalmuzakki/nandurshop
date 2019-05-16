@@ -1,6 +1,7 @@
 package com.example.nandurshop.Interface;
 
 import com.example.nandurshop.Model.GetCommodity;
+import com.example.nandurshop.Model.PostPutDelCommodity;
 import com.example.nandurshop.Model.User;
 
 import java.util.List;
@@ -17,8 +18,12 @@ public interface GetDataService {
 
     @GET("/api/commodity")
     Call<GetCommodity> getCommodity();
-//    @POST("/api/commodity")
-//    Call<Commodity> createCommodity();
+    @FormUrlEncoded
+    @POST("/api/commodity")
+    Call<PostPutDelCommodity> createCommodity(@Field("name") String nama,
+                                              @Field("variety_id") Integer variety_id,
+                                              @Field("planted_at") String planted_at,
+                                              @Field("image_url") String image_url);
 //    @GET("/api/commodity/{id}")
 //    Call<Commodity> findCommodity();
 //    @PUT("/api/commodity/{id")
