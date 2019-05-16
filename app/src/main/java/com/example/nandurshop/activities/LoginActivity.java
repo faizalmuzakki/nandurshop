@@ -3,10 +3,14 @@ package com.example.nandurshop.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.telecom.Call;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.nandurshop.Interface.GetDataService;
+import com.example.nandurshop.Model.RetrofitClientInstance;
+import com.example.nandurshop.Model.User;
 import com.example.nandurshop.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -40,7 +44,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void attemptLogin(){
-        //
+        GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
+//        Call<User> call = service.login();
     }
 
 }
