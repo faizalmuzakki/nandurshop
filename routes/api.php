@@ -23,5 +23,12 @@ Route::prefix('auth')->namespace('Auth')->group(function () {
     });
 });
 
-Route::resource('commodity', 'Commodity\CommodityApiController');
+Route::namespace('Commodity')->group(function(){
+    Route::resource('commodity', 'CommodityApiController')->except(['update', 'destroy']);
+    Route::name('commodity.')->group(function(){
+        Route::put('commodity', 'CommodityApiController@update')->name('update');
+        Route::delete('commodity', 'CommodityApiController@destroy')->name('destroy');
+    });
+})
+
 Route::resource('variety', 'Variety\VarietyApiController');

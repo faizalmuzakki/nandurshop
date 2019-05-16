@@ -123,9 +123,11 @@ class CommodityApiController extends Controller
      * @param  \App\Models\Commodity  $commodity
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Commodity $commodity)
+    public function update(Request $request)
     {
         try {
+            $commodity = Commodity::findOrFail($request->id);
+
             $commodity->name = $request->name;
             $commodity->variety_id = $request->variety_id;
             $commodity->planted_at = $request->planted_at;
@@ -152,9 +154,10 @@ class CommodityApiController extends Controller
      * @param  \App\Models\Commodity  $commodity
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Commodity $commodity)
+    public function destroy(Request $request)
     {
         try {
+            $commodity = Commodity::findOrFail($request->id);
             $commodity->delete();
 
             $commodity_resource = new CommodityResource($commodity);
