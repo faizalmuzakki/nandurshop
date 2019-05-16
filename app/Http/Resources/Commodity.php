@@ -18,6 +18,7 @@ class Commodity extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'variety_id' => $this->variety_id,
+            'image_url' => $this->image_url,
             'planted_at' => (string) $this->planted_at,
             'created_at' => (string) $this->created_at,
             'updated_at' => (string) $this->updated_at,
