@@ -52,7 +52,8 @@ public class EditCommodityActivity extends AppCompatActivity {
                         edtNama.getText().toString(),
                         Integer.parseInt(edtVarid.getText().toString()),
                         edtPlantedad.getText().toString(),
-                        edImgurl.getText().toString()
+                        edImgurl.getText().toString(),
+                        "PUT"
                 );
                 updateKontakCall.enqueue(new Callback<PostPutDelCommodity>() {
                     @Override
@@ -73,7 +74,7 @@ public class EditCommodityActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (edtId.getText().toString().trim().isEmpty()==false){
-                    Call<PostPutDelCommodity> deleteKontak = mApiInterface.deleteCommodity(Integer.parseInt(edtId.getText().toString()));
+                    Call<PostPutDelCommodity> deleteKontak = mApiInterface.deleteCommodity(Integer.parseInt(edtId.getText().toString()), "DELETE");
                     deleteKontak.enqueue(new Callback<PostPutDelCommodity>() {
                         @Override
                         public void onResponse(Call<PostPutDelCommodity> call, Response<PostPutDelCommodity> response) {

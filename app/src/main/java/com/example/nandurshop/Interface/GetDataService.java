@@ -26,19 +26,21 @@ public interface GetDataService {
                                               @Field("planted_at") String planted_at,
                                               @Field("image_url") String image_url);
     @FormUrlEncoded
-    @PUT("/api/commodity")
+    @POST("/api/commodity")
     Call<PostPutDelCommodity> updateCommodity(@Field("id") Integer id,
                                               @Field("name") String nama,
                                               @Field("variety_id") Integer variety_id,
                                               @Field("planted_at") String planted_at,
-                                              @Field("image_url") String image_url);
+                                              @Field("image_url") String image_url,
+                                              @Field("_method") String method);
 
 //    @GET("/api/commodity/{id}")
 //    Call<Commodity> findCommodity();
 
     @FormUrlEncoded
-    @DELETE("/api/commodity")
-    Call<PostPutDelCommodity> deleteCommodity(@Field("id") Integer id);
+    @POST("/api/commodity")
+    Call<PostPutDelCommodity> deleteCommodity(@Field("id") Integer id,
+                                              @Field("_method") String method);
 
     @FormUrlEncoded
     @POST("/api/auth/login")
