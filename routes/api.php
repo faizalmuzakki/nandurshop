@@ -29,6 +29,6 @@ Route::namespace('Commodity')->group(function(){
         Route::put('commodity', 'CommodityApiController@update')->name('update');
         Route::delete('commodity', 'CommodityApiController@destroy')->name('destroy');
     });
-})
+});
 
 Route::resource('variety', 'Variety\VarietyApiController');

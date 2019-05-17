@@ -16,12 +16,12 @@
     - GET /api/commodity?take=[as you want]
 - Create new commodity
     - POST /api/commodity
-    - via body: name(string), variety_id(int), planted_at(datetime), image_url(string)
+    - via body: name(string), variety_id(int), planted_at(datetime), image(file)
 - Show commodity by id
     - GET /api/commodity/{id}
 - Update commodity by id
     - PUT /api/commodity
-    - via body: id(int), name(string), variety_id(int), planted_at(datetime), image_url(string)
+    - via body: id(int), name(string), variety_id(int), planted_at(datetime), image(file)
 - Delete commodity by id
     - DELETE /api/commodity
     - via body: id(int)
