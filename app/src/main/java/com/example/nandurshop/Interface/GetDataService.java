@@ -18,18 +18,27 @@ public interface GetDataService {
 
     @GET("/api/commodity")
     Call<GetCommodity> getCommodity();
+
     @FormUrlEncoded
     @POST("/api/commodity")
     Call<PostPutDelCommodity> createCommodity(@Field("name") String nama,
                                               @Field("variety_id") Integer variety_id,
                                               @Field("planted_at") String planted_at,
                                               @Field("image_url") String image_url);
+    @FormUrlEncoded
+    @PUT("/api/commodity")
+    Call<PostPutDelCommodity> updateCommodity(@Field("id") Integer id,
+                                              @Field("name") String nama,
+                                              @Field("variety_id") Integer variety_id,
+                                              @Field("planted_at") String planted_at,
+                                              @Field("image_url") String image_url);
+
 //    @GET("/api/commodity/{id}")
 //    Call<Commodity> findCommodity();
-//    @PUT("/api/commodity/{id")
-//    Call<Commodity> updateCommodity();
-//    @DELETE("/api/commodity/{id}")
-//    Call<Commodity> deleteCommodity();
+
+    @FormUrlEncoded
+    @DELETE("/api/commodity")
+    Call<PostPutDelCommodity> deleteCommodity(@Field("id") Integer id);
 
     @FormUrlEncoded
     @POST("/api/auth/login")
