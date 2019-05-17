@@ -34,6 +34,7 @@ public class CameraFormActivity extends AppCompatActivity implements View.OnClic
     Button btnCameraForm, btnNext, btnGallery;
     Commodity plant;
     GetDataService mApiInterface;
+    String imageURL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,13 +66,17 @@ public class CameraFormActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.btnNext:
                 intent = new Intent(this,Main2Activity.class);
-                Log.d(TAG, "onClick: " + plant.getName()+plant.getPlantedAt()+plant.getImageUrl());
+                if (plant.getImageUrl() == null){
+                    imageURL = "https://www.randomlists.com/img/fruits/banana.jpg";
+                } else {
+                    imageURL = plant.getImageUrl();
+                }
                 Call<PostPutDelCommodity> postKontakCall =
                         mApiInterface.createCommodity(
                                 plant.getName(),
                                 plant.getVarietyId(),
                                 plant.getPlantedAt(),
-                                plant.getImageUrl()
+                                imageURL
                         );
 
                 postKontakCall.enqueue(new Callback<PostPutDelCommodity>() {
