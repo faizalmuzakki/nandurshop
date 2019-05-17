@@ -7,7 +7,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_margin="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/iconnandur"/>
         <TextView
+            android:layout_toRightOf="@id/imageView"
             android:id="@+id/id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,11 +28,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Varid"
+            android:layout_toRightOf="@id/imageView"
             android:layout_below="@id/id"
             android:textSize="15sp"
             />
         <TextView
             android:id="@+id/name"
+            android:layout_toRightOf="@id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Nama"
@@ -34,6 +43,7 @@
             />
         <TextView
             android:id="@+id/planted_at"
+            android:layout_toRightOf="@id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="planted_at"
@@ -42,6 +52,7 @@
             />
         <TextView
             android:id="@+id/image_url"
+            android:layout_toRightOf="@id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="image"

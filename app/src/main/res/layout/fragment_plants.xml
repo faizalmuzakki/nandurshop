@@ -36,62 +36,13 @@
                             android:layout_margin="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
-                            <ImageView
-                                android:id="@+id/ivMelon"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:src="@drawable/melon"/>
-                            <LinearLayout
-                                android:layout_marginHorizontal="10dp"
-                                android:layout_toRightOf="@+id/ivMelon"
-                                android:orientation="vertical"
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recyclerView"
+                                android:scrollbars="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Melon"
-                                    android:textSize="20sp" />
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Rp.12000"
-                                    android:textStyle="bold|italic"
-                                    android:textSize="18sp"/>
-                            </LinearLayout>
-                        </RelativeLayout>
-                    </android.support.v7.widget.CardView>
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:cardBackgroundColor="@android:color/white">
-                        <RelativeLayout
-                            android:layout_margin="5dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-                            <ImageView
-                                android:id="@+id/ivBayam"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:src="@drawable/bayam"/>
-                            <LinearLayout
-                                android:layout_marginHorizontal="10dp"
-                                android:layout_toRightOf="@+id/ivBayam"
-                                android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Melon"
-                                    android:textSize="20sp" />
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Rp.12000"
-                                    android:textStyle="bold|italic"
-                                    android:textSize="18sp"/>
-                            </LinearLayout>
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/btIns">
+                            </android.support.v7.widget.RecyclerView>
                         </RelativeLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>

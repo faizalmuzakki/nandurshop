@@ -1,14 +1,32 @@
 package com.example.nandurshop.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.example.nandurshop.Adapter.CommodityAdapter;
+import com.example.nandurshop.Interface.GetDataService;
+import com.example.nandurshop.Model.Commodity;
+import com.example.nandurshop.Model.GetCommodity;
+import com.example.nandurshop.Model.RetrofitClientInstance;
 import com.example.nandurshop.R;
+import com.example.nandurshop.activities.InsertCommodityActivity;
+import com.example.nandurshop.activities.MainCommodityActivity;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 /**
@@ -28,6 +46,12 @@ public class PlantsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    Button btIns;
+    GetDataService mApiInterface;
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     private OnFragmentInteractionListener mListener;
 
@@ -60,13 +84,41 @@ public class PlantsFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_plants, container, false);
+
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mApiInterface = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
+        refresh();
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_plants, container, false);
+        return view;
+    }
+
+    public void refresh() {
+        Call<GetCommodity> kontakCall = mApiInterface.getCommodity();
+        kontakCall.enqueue(new Callback<GetCommodity>() {
+            @Override
+            public void onResponse(Call<GetCommodity> call, Response<GetCommodity>
+                    response) {
+                List<Commodity> KontakList = response.body().getListDataCommodity();
+                Log.d("Retrofit Get", "Jumlah data Kontak: " +
+                        String.valueOf(KontakList.size()));
+                mAdapter = new CommodityAdapter(KontakList);
+                mRecyclerView.setAdapter(mAdapter);
+            }
+
+            @Override
+            public void onFailure(Call<GetCommodity> call, Throwable t) {
+                Log.e("Retrofit Get", t.toString());
+            }
+        });
     }
 
     // TODO: Rename method, update argument and hook method into UI event

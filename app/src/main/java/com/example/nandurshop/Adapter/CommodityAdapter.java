@@ -1,10 +1,13 @@
 package com.example.nandurshop.Adapter;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 //import com.example.nandurshop.activities;
@@ -13,6 +16,9 @@ import com.example.nandurshop.Model.Commodity;
 import com.example.nandurshop.R;
 import com.example.nandurshop.activities.EditCommodityActivity;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 /**
@@ -37,8 +43,21 @@ public class CommodityAdapter extends RecyclerView.Adapter<CommodityAdapter.MyVi
     public void onBindViewHolder (MyViewHolder holder,final int position){
         holder.mTextViewVarid.setText("Variety Id = " + commodities.get(position).getVarietyId());
         holder.mTextViewNama.setText("Nama = " + commodities.get(position).getName());
-        holder.mTextViewPlantedat.setText("Image = " + commodities.get(position).getPlantedAt());
+        holder.mTextViewPlantedat.setText("Planted = " + commodities.get(position).getPlantedAt());
         holder.mTextViewImg.setText("Image = " + commodities.get(position).getImageUrl());
+//        URL url = null;
+//        try {
+//            url = new URL(commodities.get(position).getImageUrl());
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
+//        Bitmap image = null;
+//        try {
+//            image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        holder.imageView.setImageBitmap(image);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,9 +79,11 @@ public class CommodityAdapter extends RecyclerView.Adapter<CommodityAdapter.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView mTextViewId, mTextViewPlantedat, mTextViewNama, mTextViewVarid, mTextViewImg;
+        public ImageView imageView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
+            imageView = (ImageView) itemView.findViewById(R.id.imageView);
             mTextViewNama = (TextView) itemView.findViewById(R.id.name);
             mTextViewPlantedat = (TextView) itemView.findViewById(R.id.planted_at);
             mTextViewImg = (TextView) itemView.findViewById(R.id.image_url);
