@@ -12,11 +12,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.nandurshop.Interface.GetDataService;
 import com.example.nandurshop.Model.Commodity;
+import com.example.nandurshop.Model.PostPutDelCommodity;
+import com.example.nandurshop.Model.RetrofitClientInstance;
 import com.example.nandurshop.R;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CameraFormActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,13 +33,13 @@ public class CameraFormActivity extends AppCompatActivity implements View.OnClic
     ImageView imageView;
     Button btnCameraForm, btnNext, btnGallery;
     Commodity plant;
+    GetDataService mApiInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_form);
         plant = (Commodity) getIntent().getSerializableExtra("plant");
-        Log.d(TAG, "onCreate: "+plant.getName());
 
         imageView = (ImageView) findViewById(R.id.imageView);
         btnCameraForm = (Button) findViewById(R.id.btnCamera);
@@ -42,6 +49,8 @@ public class CameraFormActivity extends AppCompatActivity implements View.OnClic
         btnCameraForm.setOnClickListener(this);
         btnNext.setOnClickListener(this);
         btnGallery.setOnClickListener(this);
+
+        mApiInterface = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
     }
 
     @Override
@@ -56,6 +65,27 @@ public class CameraFormActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.btnNext:
                 intent = new Intent(this,Main2Activity.class);
+                Call<PostPutDelCommodity> postKontakCall =
+                        mApiInterface.createCommodity(
+                                plant.getName(),
+                                plant.getVarietyId(),
+                                plant.getPlantedAt(),
+                                plant.getImageUrl()
+                        );
+
+                postKontakCall.enqueue(new Callback<PostPutDelCommodity>() {
+                    @Override
+                    public void onResponse(Call<PostPutDelCommodity> call, Response<PostPutDelCommodity> response) {
+                        MainCommodityActivity.ma.refresh();
+                        finish();
+                    }
+
+                    @Override
+                    public void onFailure(Call<PostPutDelCommodity> call, Throwable t) {
+                        Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                    }
+                });
+
                 startActivity(intent);
                 break;
             case R.id.btnGallery:
