@@ -65,6 +65,7 @@ public class CameraFormActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.btnNext:
                 intent = new Intent(this,Main2Activity.class);
+                Log.d(TAG, "onClick: " + plant.getName()+plant.getPlantedAt()+plant.getImageUrl());
                 Call<PostPutDelCommodity> postKontakCall =
                         mApiInterface.createCommodity(
                                 plant.getName(),
@@ -76,7 +77,7 @@ public class CameraFormActivity extends AppCompatActivity implements View.OnClic
                 postKontakCall.enqueue(new Callback<PostPutDelCommodity>() {
                     @Override
                     public void onResponse(Call<PostPutDelCommodity> call, Response<PostPutDelCommodity> response) {
-                        MainCommodityActivity.ma.refresh();
+                        Toast.makeText(CameraFormActivity.this, "Berhasil", Toast.LENGTH_SHORT).show();
                         finish();
                     }
 

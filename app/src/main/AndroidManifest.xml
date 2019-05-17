@@ -18,7 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.InsertCommodityActivity"/>
+        <activity android:name=".activities.InsertCommodityActivity">
+
+        </activity>
         <activity android:name=".activities.MainCommodityActivity"></activity>
         <activity android:name=".activities.EditCommodityActivity" />
         <activity android:name=".activities.RegisterActivity" />
