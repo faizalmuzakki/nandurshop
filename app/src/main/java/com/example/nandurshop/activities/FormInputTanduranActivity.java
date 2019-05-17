@@ -1,12 +1,18 @@
 package com.example.nandurshop.activities;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.nandurshop.R;
 
@@ -14,12 +20,21 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class FormInputTanduranActivity extends AppCompatActivity {
+public class FormInputTanduranActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     DatePickerDialog datePickerDialog;
     SimpleDateFormat simpleDateFormat;
     Button btnDatePicker;
+    FloatingActionButton fabForm;
     TextView tvDateResult;
+    Spinner sp;
+    String[] variety = {
+            "Bayam",
+            "Tomat",
+            "Lombok",
+            "Sawi",
+            "Bawang"
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +44,27 @@ public class FormInputTanduranActivity extends AppCompatActivity {
 
         tvDateResult = (TextView) findViewById(R.id.dateResult);
         btnDatePicker = (Button) findViewById(R.id.datePicker);
-        btnDatePicker.setOnClickListener(new View.OnClickListener() {
+        sp = (Spinner) findViewById(R.id.sp_variety);
+        fabForm = (FloatingActionButton) findViewById(R.id.fabForm);
+
+        final ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item, variety);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp.setAdapter(adapter);
+        sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                showDateDialog();
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(FormInputTanduranActivity.this, adapter.getItem(position)+" dipilih", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
+
+
+        btnDatePicker.setOnClickListener(this);
+        fabForm.setOnClickListener(this);
     }
     private void showDateDialog(){
 
@@ -73,5 +103,28 @@ public class FormInputTanduranActivity extends AppCompatActivity {
          * Tampilkan DatePicker dialog
          */
         datePickerDialog.show();
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()){
+            case R.id.fabForm:
+                intent = new Intent(this,CameraFormActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.datePicker:
+                showDateDialog();
+        }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

@@ -41,7 +41,7 @@ public class CameraFormActivity extends AppCompatActivity implements View.OnClic
                 }
                 break;
             case R.id.btnNext:
-                intent = new Intent(this,MainActivity.class);
+                intent = new Intent(this,Main2Activity.class);
                 startActivity(intent);
                 break;
         }
