@@ -47,7 +47,6 @@ public class Main2Activity extends AppCompatActivity implements BottomNavigation
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        Toast.makeText(this, "Test", Toast.LENGTH_SHORT).show();
         loadFragment(new DashboardFragment());
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
