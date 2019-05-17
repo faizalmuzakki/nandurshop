@@ -3,6 +3,7 @@ package com.example.nandurshop.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,9 +38,9 @@ public class EditCommodityActivity extends AppCompatActivity {
         edtId.setTag(edtId.getKeyListener());
         edtId.setKeyListener(null);
         edtNama.setText(mIntent.getStringExtra("Nama"));
-        edtVarid.setText(mIntent.getStringExtra("Variety ID"));
-        edtPlantedad.setText(mIntent.getStringExtra("Planted At"));
-        edImgurl.setText(mIntent.getStringExtra("Img URL"));
+        edtVarid.setText(mIntent.getStringExtra("Varid"));
+        edtPlantedad.setText(mIntent.getStringExtra("Plantedat"));
+        edImgurl.setText(mIntent.getStringExtra("Imgurl"));
 
         mApiInterface = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
         btUpdate = (Button) findViewById(R.id.btUpdate2);

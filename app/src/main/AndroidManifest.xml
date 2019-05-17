@@ -21,7 +21,12 @@
         <activity android:name=".activities.InsertCommodityActivity">
 
         </activity>
-        <activity android:name=".activities.MainCommodityActivity"></activity>
+        <activity android:name=".activities.MainCommodityActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".activities.EditCommodityActivity" />
         <activity android:name=".activities.RegisterActivity" />
         <activity android:name=".activities.FormInputTanduranActivity"/>
@@ -29,10 +34,6 @@
         <activity android:name=".activities.CameraFormActivity" />
         <activity android:name=".activities.MainActivity"/>
         <activity android:name=".activities.LoginActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

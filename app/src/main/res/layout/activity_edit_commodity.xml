@@ -61,7 +61,7 @@
         android:id="@+id/edtVarid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Variety Id"
+        android:hint="Varid"
         android:layout_toRightOf="@+id/tvVarid"
         android:layout_alignBaseline="@+id/tvVarid"/>
     <EditText

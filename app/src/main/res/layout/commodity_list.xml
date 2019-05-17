@@ -8,13 +8,21 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
         <TextView
-            android:id="@+id/variety_id"
+            android:id="@+id/id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="variety_id"
+            android:hint="id"
             android:layout_alignParentRight="true"
             android:textSize="15sp"
             android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/variety_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Varid"
+            android:layout_below="@id/id"
+            android:textSize="15sp"
             />
         <TextView
             android:id="@+id/name"
@@ -31,6 +39,14 @@
             android:hint="planted_at"
             android:textSize="15sp"
             android:layout_below="@id/name"
+            />
+        <TextView
+            android:id="@+id/image_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="image"
+            android:textSize="15sp"
+            android:layout_below="@id/planted_at"
             />
     </RelativeLayout>
     <View

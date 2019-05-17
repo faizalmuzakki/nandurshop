@@ -35,17 +35,20 @@ public class CommodityAdapter extends RecyclerView.Adapter<CommodityAdapter.MyVi
 
     @Override
     public void onBindViewHolder (MyViewHolder holder,final int position){
-        holder.mTextViewId.setText("Variety Id = " + commodities.get(position).getVarietyId());
+        holder.mTextViewVarid.setText("Variety Id = " + commodities.get(position).getVarietyId());
         holder.mTextViewNama.setText("Nama = " + commodities.get(position).getName());
-        holder.mTextViewNomor.setText("Image = " + commodities.get(position).getImageUrl());
+        holder.mTextViewPlantedat.setText("Image = " + commodities.get(position).getPlantedAt());
+        holder.mTextViewImg.setText("Image = " + commodities.get(position).getImageUrl());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(view.getContext(), EditCommodityActivity.class);
-                mIntent.putExtra("Nama", commodities.get(position).getName());
-                mIntent.putExtra("Planted at", commodities.get(position).getPlantedAt());
-                mIntent.putExtra("Variety Id", commodities.get(position).getVarietyId());
-                view.getContext().startActivity(mIntent);
+            Intent mIntent = new Intent(view.getContext(), EditCommodityActivity.class);
+            mIntent.putExtra("Id", commodities.get(position).getId());
+            mIntent.putExtra("Nama", commodities.get(position).getName());
+            mIntent.putExtra("Plantedat", commodities.get(position).getPlantedAt());
+            mIntent.putExtra("Varid", commodities.get(position).getVarietyId());
+            mIntent.putExtra("Imgurl", commodities.get(position).getImageUrl());
+            view.getContext().startActivity(mIntent);
             }
         });
     }
@@ -56,13 +59,15 @@ public class CommodityAdapter extends RecyclerView.Adapter<CommodityAdapter.MyVi
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextViewId, mTextViewNama, mTextViewNomor;
+        public TextView mTextViewId, mTextViewPlantedat, mTextViewNama, mTextViewVarid, mTextViewImg;
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            mTextViewId = (TextView) itemView.findViewById(R.id.name);
-            mTextViewNama = (TextView) itemView.findViewById(R.id.planted_at);
-            mTextViewNomor = (TextView) itemView.findViewById(R.id.variety_id);
+            mTextViewNama = (TextView) itemView.findViewById(R.id.name);
+            mTextViewPlantedat = (TextView) itemView.findViewById(R.id.planted_at);
+            mTextViewImg = (TextView) itemView.findViewById(R.id.image_url);
+            mTextViewId = (TextView) itemView.findViewById(R.id.edtId);
+            mTextViewVarid = (TextView) itemView.findViewById(R.id.variety_id);
         }
     }
 }
