@@ -2,7 +2,9 @@ package com.example.nandurshop.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Commodity {
+import java.io.Serializable;
+
+public class Commodity implements Serializable {
     @SerializedName("variety_id")
     private Integer variety_id;
     @SerializedName("name")
@@ -17,6 +19,9 @@ public class Commodity {
         this.variety_id = variety_id;
         this.image_url = image_url;
         this.planted_at = planted_at;
+    }
+
+    public Commodity() {
     }
 
     public String getName() {

@@ -5,26 +5,33 @@ import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.nandurshop.Model.Commodity;
 import com.example.nandurshop.R;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Locale;
 
 public class FormInputTanduranActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
+    private static final String TAG = "MainActivity";
+    Commodity plant = new Commodity();
     DatePickerDialog datePickerDialog;
     SimpleDateFormat simpleDateFormat;
     Button btnDatePicker;
+    EditText etNama;
     FloatingActionButton fabForm;
     TextView tvDateResult;
     Spinner sp;
@@ -45,6 +52,7 @@ public class FormInputTanduranActivity extends AppCompatActivity implements Adap
         tvDateResult = (TextView) findViewById(R.id.dateResult);
         btnDatePicker = (Button) findViewById(R.id.datePicker);
         sp = (Spinner) findViewById(R.id.sp_variety);
+        etNama = (EditText) findViewById(R.id.etNama);
         fabForm = (FloatingActionButton) findViewById(R.id.fabForm);
 
         final ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item, variety);
@@ -95,6 +103,7 @@ public class FormInputTanduranActivity extends AppCompatActivity implements Adap
                  * Update TextView dengan tanggal yang kita pilih
                  */
                 tvDateResult.setText("Tanggal dipilih : "+simpleDateFormat.format(newDate.getTime()));
+                plant.setPlantedAt(simpleDateFormat.format(newDate.getTime()).toString());
             }
 
         },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
@@ -111,6 +120,9 @@ public class FormInputTanduranActivity extends AppCompatActivity implements Adap
         switch (v.getId()){
             case R.id.fabForm:
                 intent = new Intent(this,CameraFormActivity.class);
+                plant.setName(etNama.getText().toString());
+                plant.setVarietyId(Arrays.asList(variety).indexOf(sp.getSelectedItem().toString()));
+                intent.putExtra("plant", plant);
                 startActivity(intent);
                 break;
             case R.id.datePicker:

@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <EditText
+            android:id="@+id/etNama"
             android:background="@drawable/rounded_buttons"
             android:paddingHorizontal="20dp"
             android:layout_width="match_parent"

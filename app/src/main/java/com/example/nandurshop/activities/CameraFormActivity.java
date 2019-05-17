@@ -5,22 +5,28 @@ import android.graphics.Bitmap;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.nandurshop.Model.Commodity;
 import com.example.nandurshop.R;
 
 public class CameraFormActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final String TAG = "MainActivity";
     private static final int REQUEST_IMAGE_CAPTURE = 100;
     ImageView imageView;
     Button btnCameraForm, btnNext;
+    Commodity plant;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_form);
+        plant = (Commodity) getIntent().getSerializableExtra("plant");
+        Log.d(TAG, "onCreate: "+plant.getName());
 
         imageView = (ImageView) findViewById(R.id.imageView);
         btnCameraForm = (Button) findViewById(R.id.btnCamera);
