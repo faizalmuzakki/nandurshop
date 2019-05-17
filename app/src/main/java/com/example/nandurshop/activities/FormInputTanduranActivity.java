@@ -35,6 +35,7 @@ public class FormInputTanduranActivity extends AppCompatActivity implements Adap
     FloatingActionButton fabForm;
     TextView tvDateResult;
     Spinner sp;
+    String datefix;
     String[] variety = {
             "Bayam",
             "Tomat",
@@ -47,7 +48,7 @@ public class FormInputTanduranActivity extends AppCompatActivity implements Adap
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_input_tanduran);
 
-        simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.KOREA);
+        simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         tvDateResult = (TextView) findViewById(R.id.dateResult);
         btnDatePicker = (Button) findViewById(R.id.datePicker);
@@ -102,8 +103,9 @@ public class FormInputTanduranActivity extends AppCompatActivity implements Adap
                 /**
                  * Update TextView dengan tanggal yang kita pilih
                  */
-                tvDateResult.setText("Tanggal dipilih : "+simpleDateFormat.format(newDate.getTime()));
-                plant.setPlantedAt(simpleDateFormat.format(newDate.getTime()));
+                datefix = simpleDateFormat.format(newDate.getTime());
+                tvDateResult.setText("Tanggal dipilih : "+datefix);
+                plant.setPlantedAt(datefix);
             }
 
         },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
