@@ -1,6 +1,7 @@
 package com.example.nandurshop.Interface;
 
-import com.example.nandurshop.Model.Commodity;
+import com.example.nandurshop.Model.GetCommodity;
+import com.example.nandurshop.Model.PostPutDelCommodity;
 import com.example.nandurshop.Model.User;
 
 import java.util.List;
@@ -16,15 +17,30 @@ import retrofit2.http.PUT;
 public interface GetDataService {
 
     @GET("/api/commodity")
-    Call<List<Commodity>> getCommodity();
-//    @POST("/api/commodity")
-//    Call<Commodity> createCommodity();
+    Call<GetCommodity> getCommodity();
+
+    @FormUrlEncoded
+    @POST("/api/commodity")
+    Call<PostPutDelCommodity> createCommodity(@Field("name") String nama,
+                                              @Field("variety_id") Integer variety_id,
+                                              @Field("planted_at") String planted_at,
+                                              @Field("image_url") String image_url);
+    @FormUrlEncoded
+    @POST("/api/commodity")
+    Call<PostPutDelCommodity> updateCommodity(@Field("id") Integer id,
+                                              @Field("name") String nama,
+                                              @Field("variety_id") Integer variety_id,
+                                              @Field("planted_at") String planted_at,
+                                              @Field("image_url") String image_url,
+                                              @Field("_method") String method);
+
 //    @GET("/api/commodity/{id}")
 //    Call<Commodity> findCommodity();
-//    @PUT("/api/commodity/{id")
-//    Call<Commodity> updateCommodity();
-//    @DELETE("/api/commodity/{id}")
-//    Call<Commodity> deleteCommodity();
+
+    @FormUrlEncoded
+    @POST("/api/commodity")
+    Call<PostPutDelCommodity> deleteCommodity(@Field("id") Integer id,
+                                              @Field("_method") String method);
 
     @FormUrlEncoded
     @POST("/api/auth/login")

@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +21,10 @@ public class Main2Activity extends AppCompatActivity implements BottomNavigation
         DashboardFragment.OnFragmentInteractionListener,
         PlantsFragment.OnFragmentInteractionListener {
 
+    private final  String CHANNEL_ID = "personal_notificatio";
+    private final int NOTIFICATION_ID = 001;
     private TextView mTextMessage;
+    NotificationCompat.Builder builder;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -47,7 +53,15 @@ public class Main2Activity extends AppCompatActivity implements BottomNavigation
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        Toast.makeText(this, "Test", Toast.LENGTH_SHORT).show();
+        builder = new NotificationCompat.Builder(this, CHANNEL_ID);
+        builder.setSmallIcon(R.drawable.iconnandur);
+        builder.setContentTitle("Nandurshop");
+        builder.setContentText("Lombok 3 hari lagi panen!!!");
+        builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+        NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(this);
+        notificationManagerCompat.notify(NOTIFICATION_ID,builder.build());
+
         loadFragment(new DashboardFragment());
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -87,6 +101,11 @@ public class Main2Activity extends AppCompatActivity implements BottomNavigation
 
     @Override
     public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    public void displayNotification(View view){
+
 
     }
 }
