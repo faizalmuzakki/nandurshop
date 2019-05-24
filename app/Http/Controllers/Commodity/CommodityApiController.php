@@ -62,15 +62,11 @@ class CommodityApiController extends Controller
     public function store(Request $request)
     {
         try {
-            if($request->hasfile('image')){
-                $file = $request->file('image');
-                $image = $request->image->storeAs('uploads/tanduran', time().'.'.$file->extension());
-            }
             $commodity = Commodity::create([
                 'name' => $request->name,
                 'variety_id' => $request->variety_id,
                 'planted_at' => $request->planted_at,
-                'image_url' => $image
+                'image_url' => $request->image_url
             ]);
 
             $commodity_resource = new CommodityResource($commodity);
@@ -133,17 +129,10 @@ class CommodityApiController extends Controller
         try {
             $commodity = Commodity::findOrFail($request->id);
 
-            if($request->hasfile('image')){
-                Storage::delete($commodity->image_url);
-                $file = $request->file('image');
-                $image = $request->image->storeAs('uploads/tanduran', time().'.'.$file->extension());
-
-                $commodity->image_url = $image;
-            }
-
             $commodity->name = $request->name;
             $commodity->variety_id = $request->variety_id;
             $commodity->planted_at = $request->planted_at;
+            $commodity->image_url = $request->image_url;
             $commodity->save();
 
             $commodity_resource = new CommodityResource($commodity);
@@ -170,7 +159,6 @@ class CommodityApiController extends Controller
     {
         try {
             $commodity = Commodity::findOrFail($request->id);
-            Storage::delete($commodity->image_url);
             $commodity->delete();
 
             $commodity_resource = new CommodityResource($commodity);

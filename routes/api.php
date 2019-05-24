@@ -31,4 +31,6 @@ Route::namespace('Commodity')->group(function(){
     });
 });
 
+Route::resource('panen', 'Panen/PanenController');
+
 Route::resource('variety', 'Variety\VarietyApiController');
