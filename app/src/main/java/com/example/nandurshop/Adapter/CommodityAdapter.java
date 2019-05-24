@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.nandurshop.Model.Commodity;
 import com.example.nandurshop.R;
 import com.example.nandurshop.activities.EditCommodityActivity;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -45,19 +46,8 @@ public class CommodityAdapter extends RecyclerView.Adapter<CommodityAdapter.MyVi
         holder.mTextViewNama.setText("Nama = " + commodities.get(position).getName());
         holder.mTextViewPlantedat.setText("Planted = " + commodities.get(position).getPlantedAt());
         holder.mTextViewImg.setText("Image = " + commodities.get(position).getImageUrl());
-//        URL url = null;
-//        try {
-//            url = new URL(commodities.get(position).getImageUrl());
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
-//        Bitmap image = null;
-//        try {
-//            image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        holder.imageView.setImageBitmap(image);
+        Picasso.get().load(commodities.get(position).getImageUrl()).into(holder.imageView);
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
