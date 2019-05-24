@@ -14,7 +14,7 @@ class AddImageCommodity extends Migration
     public function up()
     {
         Schema::table('commodities', function (Blueprint $table) {
-            $table->string('image_url')->after('name')->nullable();
+            $table->string('image_url')->after('name');
         });
     }
 
