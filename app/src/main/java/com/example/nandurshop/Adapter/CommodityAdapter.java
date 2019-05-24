@@ -46,7 +46,7 @@ public class CommodityAdapter extends RecyclerView.Adapter<CommodityAdapter.MyVi
         holder.mTextViewNama.setText("Nama = " + commodities.get(position).getName());
         holder.mTextViewPlantedat.setText("Planted = " + commodities.get(position).getPlantedAt());
         holder.mTextViewImg.setText("Image = " + commodities.get(position).getImageUrl());
-        Picasso.get().load(commodities.get(position).getImageUrl()).into(holder.imageView);
+        Picasso.get().load("http://10.183.249.199:8000" +commodities.get(position).getImageUrl()).into(holder.imageView);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
